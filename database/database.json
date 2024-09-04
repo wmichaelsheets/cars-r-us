@@ -21,7 +21,7 @@
         "price": 965
       }
     ],
-    "Interior": [
+    "interior": [
       {
         "id": 1,
         "fabric": "Beige Fabric",

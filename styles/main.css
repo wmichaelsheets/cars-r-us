@@ -1,0 +1,25 @@
+.choices {
+    display: grid; /* Apply grid layout to the choices container */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Create columns */
+    gap: 10px; /* Add spacing between columns */
+  }
+  
+  .choices__metals {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .metal-options {
+    list-style-type: disc; 
+    padding-left: 20px;
+  }
+  
+  .metal-options li {
+    margin-bottom: 5px;
+  }
+  
+  .size-options, .style-options {
+    list-style-type: disc; 
+    padding-left: 20px;
+  }
