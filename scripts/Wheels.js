@@ -15,6 +15,7 @@ export const WheelOptions = async () => {
     document.addEventListener("change", handleWheelChange)
 
        let wheelOptionsHTML = "<select id='wheel'>"
+       wheelOptionsHTML += "<option value=''>Select a wheel type</option>"
     const optionStringArray = wheel.map(
         (wheel) => {
             return  `<option value='${wheel.id}'>${wheel.type}</option>`

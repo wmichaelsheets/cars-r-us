@@ -16,13 +16,15 @@ export const TechOptions = async () => {
 
     
     let techOptionsHTML = "<select id='tech'>"
+    techOptionsHTML += "<option value=''>Select a technology option</option>"
     const optionStringArray = tech.map(
         (tech) => {
             return  `<option value='${tech.id}'>${tech.package}</option>`
         }
     )
 
-    techOptionsHTML +=  optionStringArray.join("")
+    techOptionsHTML += optionStringArray.join("")
+    techOptionsHTML += "</select>"
     
     return techOptionsHTML
     

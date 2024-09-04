@@ -1,39 +1,33 @@
-import { setStyle } from "./TransientState.js"
+import { setPaint } from "./TransientState.js"
 
 
-const handleStyleChange = (changeEvent) => {
-    if (changeEvent.target.name === "style") {
-        setStyle(parseInt(changeEvent.target.value))
+const handlePaintChange = (changeEvent) => {
+    if (changeEvent.target.id === "paint") {
+        setPaint(parseInt(changeEvent.target.value))
     }
 }
 
 
-export const StyleOptions = async () => {
-    const response = await fetch("http://localhost:8088/styles")
-    const style = await response.json()
+export const PaintOptions = async () => {
+    const response = await fetch("http://localhost:8088/paint")
+    const paint = await response.json()
 
-    document.addEventListener("change", handleStyleChange)
+    document.addEventListener("change", handlePaintChange)
 
-    // let styleOptionsHTML = "<ul>"
-    // for (const styles of style) {
-    //     styleOptionsHTML += `<input type='radio' name='style' value='${styles.id}' /> ${styles.style}`
+   
 
-    //     styleOptionsHTML +=  "</ul>"
-    // }
-
-
-    let styleOptionsHTML = ""
-    const divStringArray = style.map(
-        (style) => {
-            return `<div>
-                <input type='radio' name='style' value='${style.id}' /> ${style.style}
-            </div>`
+    let paintOptionsHTML = "<select id='paint'>"
+    paintOptionsHTML += "<option value=''>Select a paint color</option>"
+    const optionStringArray = paint.map(
+        (paint) => {
+            return `<option value='${paint.id}'> ${paint.hue}</option>`
         }
     )
 
-        styleOptionsHTML +=  divStringArray.join("")
-    
-    return styleOptionsHTML
+        paintOptionsHTML +=  optionStringArray.join("")
+        paintOptionsHTML += "</select>"
+
+    return paintOptionsHTML
     
 
  }

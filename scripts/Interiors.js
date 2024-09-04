@@ -1,39 +1,33 @@
-import { setStyle } from "./TransientState.js"
+import { setInterior } from "./TransientState.js"
 
 
-const handleStyleChange = (changeEvent) => {
-    if (changeEvent.target.name === "style") {
-        setStyle(parseInt(changeEvent.target.value))
+const handleInteriorChange = (changeEvent) => {
+    if (changeEvent.target.id === "interior") {
+        setInterior(parseInt(changeEvent.target.value))
     }
 }
 
 
-export const StyleOptions = async () => {
-    const response = await fetch("http://localhost:8088/styles")
-    const style = await response.json()
+export const InteriorOptions = async () => {
+    const response = await fetch("http://localhost:8088/interior")
+    const interior = await response.json()
 
-    document.addEventListener("change", handleStyleChange)
+    document.addEventListener("change", handleInteriorChange)
 
-    // let styleOptionsHTML = "<ul>"
-    // for (const styles of style) {
-    //     styleOptionsHTML += `<input type='radio' name='style' value='${styles.id}' /> ${styles.style}`
+    
 
-    //     styleOptionsHTML +=  "</ul>"
-    // }
-
-
-    let styleOptionsHTML = ""
-    const divStringArray = style.map(
-        (style) => {
-            return `<div>
-                <input type='radio' name='style' value='${style.id}' /> ${style.style}
-            </div>`
+    let interiorOptionsHTML = "<select id='interior'>"
+    interiorOptionsHTML += "<option value=''>Select an interior option</option>"
+    const optionStringArray = interior.map(
+        (interior) => {
+            return `<option value='${interior.id}'>${interior.fabric}</option>`
         }
     )
 
-        styleOptionsHTML +=  divStringArray.join("")
-    
-    return styleOptionsHTML
+        interiorOptionsHTML +=  optionStringArray.join("")
+        interiorOptionsHTML += "</select>"
+
+    return interiorOptionsHTML
     
 
  }
