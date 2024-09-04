@@ -1,0 +1,93 @@
+{
+    "paintColor": [
+      {
+        "id": 1,
+        "hue": "Silver",
+        "price": 500
+      },
+      {
+        "id": 2,
+        "hue": "Midnight Blue",
+        "price": 710
+      },
+      {
+        "id": 3,
+        "hue": "Firebrick Red",
+        "price": 710
+      },
+      {
+        "id": 4,
+        "hue": "Spring Green",
+        "price": 965
+      }
+    ],
+    "Interior": [
+      {
+        "id": 1,
+        "fabric": "Beige Fabric",
+        "price": 405
+      },
+      {
+        "id": 2,
+        "fabric": "Charcoal Fabric",
+        "price": 782
+      },
+      {
+        "id": 3,
+        "fabric": "White Leather",
+        "price": 1470
+      },
+      {
+        "id": 4,
+        "fabric": "Black Leather",
+        "price": 1997
+      }
+    ],
+    "technology": [
+      {
+        "id": 1,
+        "package": "Basic Package",
+        "price": 500
+      },
+      {
+        "id": 2,
+        "package": "Navigation Package",
+        "price": 736.4
+      },
+      {
+        "id": 3,
+        "package": "Visibility Package",
+        "price": 1258.9
+      },
+      {
+        "id": 4,
+        "package": "Ultra Package",
+        "price": 1800
+      }
+    ],
+    "wheels": [
+      {
+        "id": 1,
+        "type": "17-inch Pair Radial",
+        "price": 200
+      },
+      {
+        "id": 2,
+        "type": "17-inch Pair Radial Black",
+        "price": 275
+      },
+      {
+        "id": 3,
+        "type": "18-inch Pair Spoke Silver",
+        "price": 400
+      },
+      {
+        "id": 4,
+        "type": "18-inch Pair Spoke Black",
+        "price": 475
+      }
+    ],
+    "orders": [
+      
+    ]
+  }
